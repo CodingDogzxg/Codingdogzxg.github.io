@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import bloosmJson from "../../assets/content/blossom.json"
+import bloosmJson from "../../assets/json/blossom.json"
 export default {
   data() {
     return {

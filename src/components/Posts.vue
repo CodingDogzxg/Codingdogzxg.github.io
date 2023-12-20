@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import postJson from "../../assets/config/posts.json"
+import postJson from "../../assets/json/posts.json"
 
 export default {
   data() {

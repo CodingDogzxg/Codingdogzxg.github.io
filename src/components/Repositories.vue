@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import repoJson from "../../assets/config/repos.json"
+import repoJson from "../../assets/json/repos.json"
 
 export default {
   data() {
