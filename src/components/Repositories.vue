@@ -15,6 +15,8 @@
 </template>
 
 <script>
+import repoJson from "../../assets/config/repos.json"
+
 export default {
   data() {
     return {
@@ -34,8 +36,8 @@ export default {
       this.repoData = null;
       let startIndex = (this.currPage - 1) * this.itemPerPage;
 
-      this.repoData = window.repoData.config.slice(startIndex, Math.min(window.repoData.config.length, startIndex + this.itemPerPage));
-      this.pageCount = Math.ceil(window.repoData.config.length / this.itemPerPage);
+      this.repoData = repoJson.config.slice(startIndex, Math.min(repoJson.config.length, startIndex + this.itemPerPage));
+      this.pageCount = Math.ceil(repoJson.config.length / this.itemPerPage);
     },
   },
   watch: {

@@ -15,6 +15,8 @@
 </template>
 
 <script>
+import postJson from "../../assets/config/posts.json"
+
 export default {
   data() {
     return {
@@ -34,8 +36,8 @@ export default {
       this.postData = null;
       let startIndex = (this.currPage - 1) * this.itemPerPage;
 
-      this.postData = window.postData.config.slice(startIndex, Math.min(window.postData.config.length, startIndex + this.itemPerPage));
-      this.pageCount = Math.ceil(window.postData.config.length / this.itemPerPage);
+      this.postData = postJson.config.slice(startIndex, Math.min(postJson.config.length, startIndex + this.itemPerPage));
+      this.pageCount = Math.ceil(postJson.config.length / this.itemPerPage);
     },
   },
   watch: {
