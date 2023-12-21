@@ -1,13 +1,15 @@
 <template>
   <v-app>
-    <h1 class="title">Lost Love & Found Memeories</h1>
-    <h2 class="title">--Summrized by ChatGPT</h2>
-
     <div class="contentWrapper">
+      <h1 class="title1">Lost Love & Found Memeories</h1>
+      <h3 class="title2">--Summrized by ChatGPT</h3>
+
       <div class="content" v-for="(item, index) in blossomData" :key="index">
         <p :class="item.narrator">{{ item.time }}</p>
-        <p class="text">{{ item.content }}</p>
-        <v-img class="image" v-if="item.img"></v-img>
+        <div class="text">
+          <p>{{ item.content }}</p>
+          <v-img v-if="item.img" :src="item.img"></v-img>
+        </div>
       </div>
     </div>
 
@@ -27,10 +29,23 @@ export default {
 </script>
 
 <style scoped>
-.title {
-  text-align: center;
-  margin-top: 2vh;
+.title1 {
+  text-align: left;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.title2 {
+  text-align: right;
+  margin-left: 20px;
+  margin-right: 20px;
   margin-bottom: 2vh;
+}
+
+.title3 {
+  text-align: left;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .contentWrapper {
@@ -39,30 +54,31 @@ export default {
   margin-left: auto;
   margin-right: auto;
   font-size: 18px;
-  font-weight: 350;
-  color: #6C6D6E;
 }
 
 .content {
-  margin-left: 2vh;
-  margin-right: 2vh;
-  margin-top: 16px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
 }
 
 .male {
-  color:#3399FF;
+  color: #3399FF;
+  margin-bottom: 5px;
 }
 
 .female {
-  color:#EEA2AD;
+  color: #F5658E;
+  margin-bottom: 5px;
 }
 
 .omniscient {
   color: #FF7F50;
+  margin-bottom: 5px;
 }
 
 .text {
-  margin-top: 16px;
+  margin-bottom: 25px;
 }
 
 .v-theme--light,
